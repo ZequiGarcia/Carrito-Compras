@@ -1,0 +1,49 @@
+.products{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+ 
+.products ul{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax( 160px, 1fr )
+    );
+    gap: 1.5rem;
+    margin: 3% auto;
+    max-width: 700px;
+    width: 100%;
+    padding: 10px;
+}
+ 
+.products li{
+    display: flex;
+    flex-direction: column;
+ 
+    gap: 1rem;
+    border-radius: 25px;
+    background: radial-gradient(#ccbbd3, #FFF);
+    color: #5c53a1;
+    padding: 1rem;
+}
+ 
+.products img{
+    border-radius: 25px;
+    width: 100%;
+    aspect-ratio: 14/9;
+    display: block;
+    object-fit: fill;
+}
+
+.center{
+    height: 50%;
+}
+
+.botton{
+    border: 0;
+}
+
+strong{
+    font-family: 'Montserrat', sans-serif;
+}

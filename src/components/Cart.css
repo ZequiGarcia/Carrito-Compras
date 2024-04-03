@@ -1,0 +1,82 @@
+.cart {
+    background: #0a192f;
+    display: none; /*hacemos que el carrito no se vea por defecto */
+    padding: 32px;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 200px;
+  }
+   
+  .cart img {
+    border-radius: 25px;
+    width: 100%;
+    aspect-ratio: 14/9;
+    display: block;
+    object-fit: fill;
+  }
+   
+  .cart li {
+    list-style: none;
+    border-radius: 25px;
+    background: radial-gradient(#ccbbd3, #FFF);
+    color: #5c53a1;
+    margin-top: 5%;
+    padding: 1rem;
+  }
+
+  .cart ul{
+    max-height: 80%;
+    overflow: auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    .cart ul {
+        max-height: 80vh; /* Reducir la altura máxima para pantallas pequeñas */
+    }
+}
+   
+  .cart footer {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+   
+  .cart footer button {
+    padding: 8px;
+  }
+   
+  .cart-button {
+    align-items: center;
+    background: #09f;
+    border-radius: 9999px;
+    cursor: pointer;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    padding: 4px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    transition: all 0.3s ease;
+    width: 32px;
+    z-index: 9999;
+  }
+   
+  .cart-button:hover {
+      scale: 1.1;
+    }
+    /**Aquí usamos un selector hermano (sibling), porque lo que hace es que
+      *buscamos el hermano cuando esté checado, y luego
+      *le ponemos en pantalla con display block */
+    .cart-button ~ input:checked ~ .cart {
+      height: 100%;
+      display: block;
+    }
+    p{
+      margin: 0;
+      margin-bottom: 0.1rem;
+      padding: 1%;
+      font-size: 20px;
+    }
